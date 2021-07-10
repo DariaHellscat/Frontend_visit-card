@@ -1,9 +1,53 @@
-.container {
-  min-width: 1200px;
-  margin: 0 auto;
+html {
+  box-sizing: border-box;
 }
 
-header {
-  height: 100px;
-  background-color: rgb(210, 177, 223);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 70px;
+  background-color: rgba(46, 8, 48, 0.822);
+}
+
+.header__content-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: rgba(248, 248, 248, 0.856);
+  min-height: calc(100vh - 110px);
+}
+
+.heading__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 45px;
+}
+
+.main__heading {
+  width: 350px;
+}
+
+.main__heading-color {
+  color: rgb(129, 14, 58);
+}
+
+.frontend {
+  font-size: 48px;
+}
+
+.header__content-image {
+  background-size: contain;
+  width: 600px;
+  height: 500px;
 }
