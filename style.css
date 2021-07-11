@@ -9,7 +9,7 @@ html {
 }
 
 .logo__text {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   color: rgba(240, 248, 255, 0.575);
   opacity: unset;
   text-transform: uppercase;
