@@ -112,7 +112,7 @@ html {
 }
 
 .about__images-inner {
-  padding-top: 100px;
+  padding-top: 200px;
   padding-right: 50px;
 }
 
@@ -136,18 +136,26 @@ html {
   flex-direction: column;
   justify-content: center;
   margin-right: 100px;
-  margin-left: 50px;
 }
 
 .about__text {
   width: 400px;
-  font-family: Montserrat;
+  font-family: Roboto Condensed;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 h2.about__heading {
   margin: 0;
   padding-top: 100px;
-  padding-bottom: 70px;
-  border: rgb(129, 14, 58);
-  font-family: Roboto Condensed;
+  padding-bottom: 15px;
+  font-size: 36px;
+  font-family: Roboto;
+}
+
+.header__about {
+  border-bottom: 5px solid rgb(129, 14, 58);
+  display: block;
+  width: 400px;
+  padding-top: 5px;
 }
