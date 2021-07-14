@@ -72,7 +72,9 @@ h4 {
 }
 
 .header {
-  background-color: rgba(46, 8, 48, 0.822);
+  /* Надо поставить нужный цвет background-color: rgb(214, 213, 214); */
+  /*   background-color: rgba(46, 8, 48, 0.822);
+ */
 }
 
 .header__top-inner {
