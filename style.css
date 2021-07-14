@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+.body {
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,6 +20,37 @@ html {
   text-decoration: none;
   font-size: 12px;
   font-weight: 600;
+}
+
+section {
+  padding: 200px 100px;
+  max-height: 100vh;
+  padding-bottom: 0;
+}
+
+h3 {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 15px;
+  font-size: 36px;
+  font-family: Roboto;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-family: Montserrat;
+  color: rgb(129, 14, 58);
+}
+
+.logo__text {
+  color: rgba(240, 248, 255, 0.575);
+  opacity: unset;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Montserrat;
 }
 
 .menu__list {
@@ -36,23 +71,24 @@ html {
   text-decoration: none;
 }
 
+.header {
+  background-color: rgba(46, 8, 48, 0.822);
+}
+
 .header__top-inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
   height: 70px;
-  background-color: rgba(46, 8, 48, 0.822);
 }
 
 .header__content-inner {
-  padding: 40px;
+  padding: 40px 40px 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  background-color: rgba(248, 248, 248, 0.856);
-  min-height: calc(100vh - 110px);
 }
 
 .heading__inner {
@@ -70,6 +106,9 @@ html {
 
 .main__heading-color {
   color: rgb(129, 14, 58);
+  display: block;
+  /*  Делаю анимацию для заголовка */
+  /*   animate__zoomIn */
 }
 
 .frontend {
@@ -90,4 +129,149 @@ html {
 .cooperation {
   color: rgb(129, 14, 58);
   font-weight: 700;
+  display: inline-block;
+}
+
+.icons {
+  font-size: 40px;
+  color: rgb(129, 14, 58);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.blockquote {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(49, 36, 66) 0 0 08px;
+  max-height: 100px;
+  color: rgb(49, 36, 66);
+  font-family: Encode;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.quote {
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+}
+
+.about__text-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 100px;
+}
+
+.about__text {
+  width: 400px;
+  font-family: Roboto Condensed;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+h2.about__heading {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 15px;
+  font-size: 36px;
+  font-family: Roboto;
+}
+
+.header__about {
+  border-bottom: 5px solid rgb(129, 14, 58);
+  display: block;
+  width: 400px;
+  padding-top: 5px;
+}
+
+.about__images-inner {
+  padding-top: 200px;
+  padding-right: 50px;
+}
+
+.about__image-bg {
+  width: 400px;
+  height: 356px;
+  position: absolute;
+  z-index: 100;
+}
+
+.about__image-photo {
+  width: 400px;
+  height: 356px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 90;
+}
+
+.about__btn {
+  height: 45px;
+  width: 250px;
+  background-color: rgb(129, 14, 58);
+  margin-left: 380px;
+  margin-top: 50px;
+  box-shadow: rgb(11, 23, 32) inset 0 0 6px;
+  /*   margin: 0 auto; кнопка встаёт вначале странице */
+  left: 475px;
+  right: 475px;
+}
+
+.about__btn:hover {
+  background-color: rgb(11, 23, 32);
+  box-shadow: aliceblue inset 0 0 10px;
+}
+
+.btn__text {
+  font-size: 18px;
+  color: aliceblue;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: Roboto Condensed;
+}
+
+.animate__pulse {
+  animation-iteration-count: infinite;
+}
+
+.my__offering-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.My__offering-heading {
+  padding-top: 15px;
+  font-family: Montserrat;
+  border-bottom: 5px solid rgb(129, 14, 58);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my__offering-item {
+  background-color: aliceblue;
+  width: 450px;
+  height: 450px;
+  color: rgb(0, 0, 0);
+  font-family: Roboto Condensed;
+  font-size: 30px;
+  line-height: 45px;
+  box-shadow: rgba(31, 9, 9, 0.698) 0 0 15px;
+}
+
+.offering__list {
+  list-style: none;
+  text-align: left;
+  line-height: 30px;
+  list-style-type: circle;
 }
