@@ -4,20 +4,24 @@ html {
 
 .body {
   min-height: 100vh;
+  /* font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Condensed", sans-serif; */
 }
 
 .container {
   /* минимальная или максимальная ширина */
-  max-width: 1200px;
+  max-width: 1190px;
+  padding: 0 10px;
   margin: 0 auto;
-  max-height: 100vh;
-  /*   background-color: rgba(248, 248, 248, 0.856);
- */
+  padding: 0;
 }
 
 section {
   padding: 100px 100px;
-  max-height: 100vh;
+  /* 
+  не надо задавать максимальную высоту секции  max-height: 100vh;
+ */
   background-color: rgba(248, 248, 248, 0.856);
 }
 
@@ -26,7 +30,7 @@ h3 {
   padding-top: 100px;
   padding-bottom: 15px;
   font-size: 36px;
-  font-family: Roboto;
+  font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
 }
 
@@ -65,6 +69,14 @@ h4 {
   text-decoration: none;
 }
 
+a.menu__list-link {
+  margin-bottom: 50px;
+}
+
+.menu__list-link:hover {
+  border-bottom: 3px solid #490a3bfb;
+}
+
 .header {
   background-color: rgba(46, 8, 48, 0.822);
 }
@@ -93,11 +105,9 @@ h4 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  /*   background-color: rgba(248, 248, 248, 0.856);
- */
   background: linear-gradient(
     25deg,
-    #ffffff,
+    #e7f1f8,
     #ffffff,
     #ffffff,
     #ffffff,
@@ -155,31 +165,19 @@ h4 {
   justify-content: center;
 }
 
-.about {
-  background: linear-gradient(
-    60deg,
-    #c9f4ff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #c3dfff
-  );
-}
-
-.about__inner {
-  display: flex;
-  flex-direction: row;
-}
-
 .blockquote {
-  background-color: rgb(236, 236, 236);
-  /* background-image: url(images/blockquote-bg.png); */
+  background: linear-gradient(
+    45deg,
+    #af92ffb4,
+    #89e3fac7,
+    #e6e7bd,
+    #ffffff,
+    #ebe7e7
+  );
   background-repeat: no-repeat;
-  /*   box-shadow: rgb(49, 36, 66) 0 0 04px; */
   height: 30px;
   color: rgb(49, 36, 66);
   font-size: 24px;
-  padding-top: 15px;
   text-align: center;
   text-transform: uppercase;
   font-family: Roboto;
@@ -190,6 +188,9 @@ h4 {
 
 .blockquote-text {
   margin: 0;
+  padding-bottom: 25px;
+  line-height: 35px;
+  border-left: 5px solid rgb(129, 14, 58);
 }
 
 .quote {
@@ -199,8 +200,24 @@ h4 {
 }
 
 .arrow-image {
-  width: 30px;
-  height: 35px;
+  width: 50px;
+  height: 60px;
+}
+
+.about {
+  background: linear-gradient(
+    60deg,
+    #d2e3e7,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #d2e3e7
+  );
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: row;
 }
 
 .about__text-inner {
@@ -258,15 +275,14 @@ h2.about__heading {
   background-color: rgb(129, 14, 58);
   margin-left: 380px;
   margin-top: 50px;
+  margin-bottom: 100px;
   box-shadow: rgb(11, 23, 32) inset 0 0 6px;
   /*   margin: 0 auto; кнопка встаёт вначале странице */
-  left: 475px;
-  right: 475px;
 }
 
 .about__btn:hover {
   background-color: rgb(11, 23, 32);
-  box-shadow: aliceblue inset 0 0 10px;
+  box-shadow: rgb(46, 60, 71) inset 0 0 10px;
 }
 
 .btn__text {
@@ -281,8 +297,80 @@ h2.about__heading {
   animation-iteration-count: infinite;
 }
 
+.My__skills {
+  min-height: 400px;
+  background: linear-gradient(75deg, #ffffff, #dfe9f8c9, #ffffff, #ffffff);
+}
+
+.My__skills-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.My__skills-info {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 40px;
+}
+
+.My__skills-info-item {
+  width: 350px;
+  border-top: 3px solid rgb(82, 34, 97);
+  padding: 10px 0 28px;
+  text-transform: uppercase;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #1d1d1d;
+  position: relative;
+}
+
+.My__skills-info-item span {
+  display: block;
+  position: absolute;
+  margin-right: 7px;
+  right: 0;
+  top: 0;
+}
+
+.My__skills-info-item span::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #f0f0f0;
+  right: -7px;
+  top: -3px;
+  width: 100%;
+}
+
+.My__skills-icons {
+  width: 450px;
+  display: flex;
+  flex-direction: center;
+  justify-content: space-between;
+}
+
+.My__skills-icons-container {
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.My__skills-icon {
+  width: 130px;
+}
+
+.My__skills-icon img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 40px;
+}
+
 .My__offering {
-  background-image: url(images/bg3.png);
+  background-image: url(images/bg-images/bg3.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -303,6 +391,8 @@ h2.about__heading {
   height: 100px;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin-bottom: 100px;
 }
 
 .my__offering-item {
@@ -319,9 +409,9 @@ h2.about__heading {
   text-align: center;
 }
 
-web-design {
+/* web-design {
   margin: 0;
-}
+} */
 
 .offering__list {
   list-style: none;
@@ -331,7 +421,7 @@ web-design {
   list-style-type: circle;
 }
 
-li:hover {
+.offering__list-item:hover {
   min-width: 350px;
   min-height: 40px;
   border-radius: 35px;
@@ -350,8 +440,76 @@ li:hover {
 }
 
 .portfolio {
-  background-image: url(images/portfolio-bg3.png);
+  background-image: url(images/bg-images/bg4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*  min-height: 100vh; */
+}
+
+.portfolio__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio__slider-image {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.portfolio__slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  text-align: center;
+}
+
+ul.slick-dots {
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-50%);
+}
+
+.slick-dots li {
+  padding: 5px;
+}
+
+.slick-dots {
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(129, 14, 58);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.slick-active button {
+  width: 16px;
+  height: 16px;
+}
+
+.portfolio__slider-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.Contacts {
+  background-image: url(images/bg-images/bg4.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
