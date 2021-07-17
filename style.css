@@ -69,6 +69,14 @@ h4 {
   text-decoration: none;
 }
 
+a.menu__list-link {
+  margin-bottom: 50px;
+}
+
+.menu__list-link:hover {
+  border-bottom: 3px solid #490a3bfb;
+}
+
 .header {
   background-color: rgba(46, 8, 48, 0.822);
 }
@@ -97,8 +105,6 @@ h4 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  /*   background-color: rgba(248, 248, 248, 0.856);
- */
   background: linear-gradient(
     25deg,
     #e7f1f8,
@@ -182,6 +188,9 @@ h4 {
 
 .blockquote-text {
   margin: 0;
+  padding-bottom: 25px;
+  line-height: 35px;
+  border-left: 5px solid rgb(129, 14, 58);
 }
 
 .quote {
@@ -191,8 +200,8 @@ h4 {
 }
 
 .arrow-image {
-  width: 30px;
-  height: 35px;
+  width: 50px;
+  height: 60px;
 }
 
 .about {
@@ -299,16 +308,12 @@ h2.about__heading {
   justify-content: space-between;
 }
 
-.My__skills-heading {
-  padding: 0;
-  margin-bottom: 100px;
-}
-
 .My__skills-info {
   margin-left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: left;
+  margin-top: 40px;
 }
 
 .My__skills-info-item {
@@ -349,14 +354,19 @@ h2.about__heading {
   justify-content: space-between;
 }
 
-.My__skills-icons-inner {
+.My__skills-icons-container {
   column-count: 3;
-  column-gap: 20px;
-  padding-bottom: 10px;
+  column-gap: 40px;
 }
 
 .My__skills-icon {
   width: 130px;
+}
+
+.My__skills-icon img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 40px;
 }
 
 .My__offering {
@@ -381,6 +391,8 @@ h2.about__heading {
   height: 100px;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin-bottom: 100px;
 }
 
 .my__offering-item {
@@ -428,26 +440,76 @@ h2.about__heading {
 }
 
 .portfolio {
-  background-image: url(images/portfolio-bg3.png);
+  background-image: url(images/bg-images/bg4.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  background-size: contain;
+  /*  min-height: 100vh; */
 }
 
-.portfolio__inner {
+.portfolio__slider {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  column-count: 2;
-  column-gap: 30px;
-  width: 600px;
+  position: relative;
 }
 
-.portfolio__item {
-  width: 500px;
-  height: 300px;
-  border: 2px solid gray;
-  margin-right: 15px;
+.portfolio__slider-image {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.portfolio__slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  text-align: center;
+}
+
+ul.slick-dots {
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-50%);
+}
+
+.slick-dots li {
+  padding: 5px;
+}
+
+.slick-dots {
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(129, 14, 58);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.slick-active button {
+  width: 16px;
+  height: 16px;
+}
+
+.portfolio__slider-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.Contacts {
+  background-image: url(images/bg-images/bg4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

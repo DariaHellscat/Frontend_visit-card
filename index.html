@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css">
+       <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
  <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Front-dev Daria Golubnichaia</title>
   </head>
   <body>
@@ -22,16 +22,16 @@
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="">Обо мне</a>
+                  <a class="menu__list-link" href="#about-me">Обо мне</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="">Услуги</a>
+                  <a class="menu__list-link" href="#service">Услуги</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="">Портфолио</a>
+                  <a class="menu__list-link" href="#my-portfolio">Портфолио</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href=""> Контакты</a>
+                  <a class="menu__list-link" href="#contact-me"> Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -70,13 +70,19 @@
     <div class="blockquote__inner">
       <p class="blockquote-text">Хотите заказать уникальный проект с авторским дизайном? <br>
      <!--    <span class="quote">Далее</span>  -->
-        <img class="arrow-image" src="images/arrow.png" alt="">
+       <!--  <img class="arrow-image" src="images/arrow.png" alt=""> -->
      </p>
+
+     <a href="#text-me">
+ <img class="arrow-image" src="images/icons/arrow.png" alt="">
+     </a>
+     
     </div>
 </section>
 
-      <section class="about">
+      <section class="about" id="about-me">
         <div class="container">
+           <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">ОБО МНЕ</h3>
           <div class="about__inner">
             <div class="about__text-inner">
               <h2 class="about__heading">Меня зовут <span class="header__about">Дарья Голубничая         </span></h2>
@@ -116,19 +122,19 @@
             </div>
           </div>
           <button class="about__btn animate__animated animate__pulse">
-            <p class="btn__text">Связаться со мной</p>
+            <p class="btn__text" id="text-me">Связаться со мной</p>
             </button>
         </div>
       </section>
 
           <section class="My__skills">
               <div class="container">
-                  <h3 class="My__skills-heading">НАВЫКИ</h3>
+                  <h3 class="Main-section-heading">НАВЫКИ</h3>
                   <div class="My__skills-inner">
                     <div class="My__skills-info">
                       <div class="My__skills-info-item">
                         HTML/CSS
-                          <span style="width: calc(100% - 95%)" ;>95%</span>
+                      <span style="width: calc(100% - 95%)" ;>95%</span>
                       </div>
                        <div class="My__skills-info-item">
                         Twitter Bootstrap
@@ -138,7 +144,7 @@
                         Figma/ Avocode/ Sketch/ Zeplin
                           <span style="width: calc(100% - 90%)" ;>90%</span>
                       </div>
-                          <div class="My__skills-info-item">
+                        <div class="My__skills-info-item">
                         Jquery
                           <span style="width: calc(100% - 80%)" ;>80%</span>
                       </div>
@@ -146,7 +152,7 @@
                         JavaScript
                           <span style="width: calc(100% - 75%)" ;>75%</span>
                       </div>
-                          <div class="My__skills-info-item">
+                         <div class="My__skills-info-item">
                         Vue.js
                           <span style="width: calc(100% - 65%)" ;>65%</span>
                       </div>
@@ -155,26 +161,34 @@
                           <span style="width: calc(100% - 78%)" ;>78%</span>
                       </div>
                     </div>
+
+
                     <div class="My__skills-icons">
-                      <div class="My__skills-icons-inner">
-                         <img class="My__skills-icon" src="images/icons/html-css.png" alt="">
-                       <img class="My__skills-icon" src="images/icons/bootstrap.png" alt="">
-                        <img class="My__skills-icon" src="images/icons/figma.png" alt="">
-                         <img class="My__skills-icon" src="images/icons/avocode.png" alt="">
-                          <img class="My__skills-icon" src="images/icons/zeplin.png" alt="">
-                           <img class="My__skills-icon" src="images/icons/jquery.png" alt="">
-                            <img class="My__skills-icon" src="images/icons/javascript.png" alt="">
-                             <img class="My__skills-icon" src="images/icons/vue.js.png" alt="">
-                              <img class="My__skills-icon" src="images/icons/react.png" alt="">
-
+                      <div class="My__skills-icons-container">
+                        <div class="My__skills-icon">
+                         <img src="images/icons/html5.png" alt="">
+                        </div>
+                        <div class="My__skills-icon">
+                         <img src="images/icons/css3.png" alt="">
+                        </div>
+                        <div class="My__skills-icon">
+                       <img src="images/icons/bootstrap.png" alt="">
+                        </div>
+                        <div class="My__skills-icon">
+                        <img src="images/icons/figma.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/zeplin.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/javascript.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/jquery.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/vue.js.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/react.png" alt=""></div>
+                          
                       </div>
-
                     </div>
                   </div>
               </div>
             </section>
 
-     <section class="My__offering">
+     <section class="My__offering" id="service">
        <div class="container">
          <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">УСЛУГИ</h3>
          <div class="my__offering-inner">
@@ -203,29 +217,40 @@
        </div>
      </section>
 
-     <section class="portfolio">
+     <section class="portfolio" id="my-portfolio">
       <div class="container">
           <h3 class="Main-section-heading">Мои работы</h3>
-          <div class="portfolio__inner">
-            <div class="portfolio__item">
-              <a class="portfolio__item-link" href=""><img src="" alt=""></a>
-            </div>
-             <div class="portfolio__item">
-              <a class="portfolio__item-link" href=""><img src="" alt=""></a>
-            </div>
-             <div class="portfolio__item">
-              <a class="portfolio__item-link" href=""><img src="" alt=""></a>
-            </div>
-             <div class="portfolio__item">
-              <a class="portfolio__item-link" href=""><img src="" alt=""></a>
-            </div>
 
+          <div class="portfolio__slider">
+            <div class="portfolio__slider-item">
+              <img class="portfolio__slider-image" src="images/portfolio_images/viking-barbershop.png" alt="">
+              <p class="portfolio__slider-text">Проект для барбершопа "Viking"</p>
+            </div>
+             <div class="portfolio__slider-item">
+            <img  class="portfolio__slider-image" src="images/portfolio_images/room-site.png" alt="">
+            <p class="portfolio__slider-text">Сайт компании ROOM. Организация переговорных кабинок.</p>
+            </div>
+             <div class="portfolio__slider-item">
+              <img  class="portfolio__slider-image" src="images/portfolio_images/wave-school.png" alt="">
+              <p class="portfolio__slider-text">Школа сёрфинга WAVE</p>
+            </div>
+            <!--  <div class="portfolio__item">
+              <img  class="portfolio__item-image" src="" alt="">
+            </div> -->
           </div>
       </div>
       <div class="border"></div>
      </section>
 
-    </div>
+     <section class="Contacts" id="contact-me">
+       <h3 class="Main-section-heading">Связаться со мной</h3>
 
+
+     </section>
+
+    </div>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="JS/slick.min.js"></script>
+<script src="JS/script.js"></script>
   </body>
 </html>
