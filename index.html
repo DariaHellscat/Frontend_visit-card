@@ -14,9 +14,9 @@
     <title>Front-dev Daria Golubnichaia</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="header__top">
+
+      <header class="header" id="top">
+           <div class="header__top">
           <div class="header__top-inner">
             <a href="index.html" class="logo__text">G.o.l.u.b.n.i.c.h.a.i.a</a>
             <nav class="menu">
@@ -37,9 +37,9 @@
             </nav>
           </div>
         </div>
-      </div>
-      <div class="header__content">
-        <div class="container">
+     
+        
+          <div class="header__content">
           <div class="header__content-inner">
             <img
               class="header__content-image"
@@ -60,29 +60,28 @@
               </h2>
             </div>
           </div>
-        </div>
       </div>
+
+      </header>
+
 
 <!-- Секция с цитатой для разбавления сайта -->
 
 <section class="blockquote">
- 
-    <div class="blockquote__inner">
+   <div class="blockquote__inner">
       <p class="blockquote-text">Хотите заказать уникальный проект с авторским дизайном? <br>
-     <!--    <span class="quote">Далее</span>  -->
-       <!--  <img class="arrow-image" src="images/arrow.png" alt=""> -->
      </p>
-
-     <a href="#text-me">
- <img class="arrow-image" src="images/icons/arrow.png" alt="">
-     </a>
-     
+     <a href="#text-me"><img class="arrow-image" src="images/icons/arrow.png" alt=""></a>
     </div>
 </section>
 
       <section class="about" id="about-me">
         <div class="container">
-           <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">ОБО МНЕ</h3>
+          <div class="Main-heading-inner">
+             <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">ОБО МНЕ</h3>
+           <a href="#top"><img class="link-icon" src="images/icons/arrow7.png" alt=""></a>
+          </div>
+           
           <div class="about__inner">
             <div class="about__text-inner">
               <h2 class="about__heading">Меня зовут <span class="header__about">Дарья Голубничая         </span></h2>
@@ -122,14 +121,17 @@
             </div>
           </div>
           <button class="about__btn animate__animated animate__pulse">
-            <p class="btn__text" id="text-me">Связаться со мной</p>
+            <p class="btn__text">Связаться со мной</p>
             </button>
         </div>
       </section>
 
           <section class="My__skills">
               <div class="container">
-                  <h3 class="Main-section-heading">НАВЫКИ</h3>
+                <div class="Main-heading-inner">
+                   <h3 class="Main-section-heading">НАВЫКИ</h3>
+                  <a href="#top"><img class="link-icon" src="images/icons/arrow7.png" alt=""></a>
+                </div>
                   <div class="My__skills-inner">
                     <div class="My__skills-info">
                       <div class="My__skills-info-item">
@@ -146,14 +148,14 @@
                       </div>
                         <div class="My__skills-info-item">
                         Jquery
-                          <span style="width: calc(100% - 80%)" ;>80%</span>
+                          <span style="width: calc(100% - 65%)" ;>65%</span>
                       </div>
                           <div class="My__skills-info-item">
                         JavaScript
                           <span style="width: calc(100% - 75%)" ;>75%</span>
                       </div>
                          <div class="My__skills-info-item">
-                        Vue.js
+                        Node.js
                           <span style="width: calc(100% - 65%)" ;>65%</span>
                       </div>
                           <div class="My__skills-info-item">
@@ -178,9 +180,8 @@
                         <div class="My__skills-icon"><img src="images/icons/zeplin.png" alt=""></div>
                         <div class="My__skills-icon"><img src="images/icons/javascript.png" alt=""></div>
                         <div class="My__skills-icon"><img src="images/icons/jquery.png" alt=""></div>
-                        <div class="My__skills-icon"><img src="images/icons/vue.js.png" alt=""></div>
+                        <div class="My__skills-icon"><img src="images/icons/node.js.png" alt=""></div>
                         <div class="My__skills-icon"><img src="images/icons/react.png" alt=""></div>
-                          
                       </div>
                     </div>
                   </div>
@@ -189,7 +190,10 @@
 
      <section class="My__offering" id="service">
        <div class="container">
-         <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">УСЛУГИ</h3>
+        <div class="Main-heading-inner">
+           <h3 class="Main-section-heading animate__animated animate__fadeInRightBig">УСЛУГИ</h3>
+         <a href="#top"><img class="link-icon" src="images/icons/arrow7.png" alt=""></a>
+        </div>
          <div class="my__offering-inner">
            <div class="my__offering-item">
              <h4>Разработка сайтов</h4>
@@ -216,10 +220,23 @@
        </div>
      </section>
 
+
+<section class="blockquote blockquote-offering">
+    <div class="blockquote__inner">
+      <p class="blockquote-text">Со мной можно связаться в социальных сетях <br>
+     </p>
+    <a target="blank" href="https://vk.com/golubdasha5"><img class="image-icon" src="images/icons/vkontakte-icon.png" alt=""></a>
+    <a target="blank" href="https://instagram.com/d_golubnichaia?utm_medium=copy_link"><img class="image-icon" src="images/icons/instagram-icon.png" alt=""></a>
+    <a target="blank" href="https://t.me/d_golubnichaia"><img class="image-icon" src="images/icons/telegram-icon.png" alt=""></a>
+    </div>
+</section>
+
      <section class="portfolio" id="my-portfolio">
       <div class="container">
+        <div class="Main-heading-inner">
           <h3 class="Main-section-heading">Мои работы</h3>
-
+          <a href="#top"><img class="link-icon" src="images/icons/arrow7.png" alt=""></a>
+        </div>
           <div class="portfolio__slider">
             <div class="portfolio__slider-item">
               <img class="portfolio__slider-image" src="images/portfolio_images/viking-barbershop.png" alt="">
@@ -233,20 +250,53 @@
               <img  class="portfolio__slider-image" src="images/portfolio_images/wave-school.png" alt="">
               <p class="portfolio__slider-text">Школа сёрфинга WAVE</p>
             </div>
-            <!--  <div class="portfolio__item">
-              <img  class="portfolio__item-image" src="" alt="">
-            </div> -->
+
           </div>
       </div>
       <div class="border"></div>
      </section>
 
      <section class="Contacts" id="contact-me">
-       <h3 class="Main-section-heading">Связаться со мной</h3>
+       <div class="container">
+          <div class="Main-heading-inner">
+         <h3 class="Main-section-heading">Связаться со мной</h3>
+       <a href="#top"><img class="link-icon" src="images/icons/arrow7.png" alt=""></a>
+       </div>
+       <div class="Contacts__inner">
+         <div class="Contacts__left" id="text-me">
+           <h2 class="Contacts__heading">Готовы обсудить ваш проект?</h2>
+           <p class="Contacts__left-text">Оставьте заявку и я свяжусь с Вами в ближайшее время</p>
+           <form class="Contacts__left-form">
+            <input type="text" placeholder="ИМЯ">
+            <input type="text" placeholder="EMAIL">
+             <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+             <textarea class="textarea-message" placeholder="ВВЕДИТЕ СООБЩЕНИЕ"></textarea>
+            <!--  <input class="add-file" type="file" type="text"> 
+            здесь я хочу сделать форму для прикрепления файлов, например ТЗ на разработку--> 
+                 <button class="contact-form-btn" type="submit">
+               оТПРАВИТЬ
+              </button>
+           </form>
+         </div>
 
+         <div class="Contacts__right">
+           <img class="gmail-icon" src="images/icons/gmail-icon.png" alt="">
+           <span class="Contacts__right-text">daryadeveloper14@gmail.com</span> <br>
+         </div>
+       </div>
+
+       </div>
+      
      </section>
 
-    </div>
+     <footer class="footer">
+       <div class="container">
+         <div class="footer__inner">
+         <p class="footer-text">©G.O.L.U.B.N.I.C.H.A.I.A - Все права защищены, 2021.</p>
+         </div>
+       </div>
+     </footer>
+
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="JS/slick.min.js"></script>
 <script src="JS/script.js"></script>
