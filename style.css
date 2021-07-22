@@ -93,11 +93,19 @@ a.menu__list-link {
 }
 
 .menu__list-link:hover {
-  border-bottom: 3px solid #490a3bfb;
+  border-bottom: 2px solid #490a3bfb;
+  transition: 1s;
 }
 
 .header {
   background-color: rgba(46, 8, 48, 0.822);
+}
+
+.header__top {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  height: 70px;
 }
 
 .header__top-inner {
@@ -106,6 +114,7 @@ a.menu__list-link {
   align-items: center;
   position: relative;
   height: 70px;
+  margin-bottom: 100px;
   background: linear-gradient(
     45deg,
     #ebe7e7,
@@ -119,7 +128,7 @@ a.menu__list-link {
 }
 
 .header__content-inner {
-  padding: 40px 40px 40px;
+  padding: 120px 40px 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,7 +147,7 @@ a.menu__list-link {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 45px;
+  margin-top: 70px;
   margin-left: 100px;
 }
 
@@ -207,7 +216,7 @@ a.menu__list-link {
 
 .blockquote-offering {
   background: linear-gradient(
-    45deg,
+    -45deg,
     #ebe7e7,
     #ffffff,
     #8bb8ecc7,
@@ -258,6 +267,7 @@ a.menu__list-link {
 
 .about__inner {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
@@ -294,31 +304,40 @@ h2.about__heading {
   padding-right: 50px;
 }
 
-.about__image-bg {
+/*  .about__image-bg {
   width: 400px;
   height: 356px;
   position: absolute;
-  z-index: 100;
-  border-radius: 48%;
-  box-shadow: rgb(11, 23, 32) inset 10px 10px 10px;
-}
+  z-index: -90; 
+  border-radius: 48%;  */
+/*  убран цветовой фон, потому что форма обратной связи показывается внизу картинок 
+} */
 
 .about__image-photo {
   width: 400px;
   height: 356px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 90;
+  /* position: absolute; */
+  /*   z-index: 100; */
+  box-shadow: 12px 12px 2px 1px rgba(87, 13, 47, 0.678);
+  /*  display: flex;
+  justify-content: center; */
 }
 
 .about__btn {
   height: 45px;
   width: 250px;
   background-color: rgb(129, 14, 58);
-  margin-left: 380px;
+  margin-left: 38%;
   margin-top: 50px;
   margin-bottom: 100px;
-  box-shadow: rgb(11, 23, 32) inset 0 0 6px;
+  box-shadow: #0b1720 inset 0 0 6px;
+  cursor: pointer;
+  font-size: 18px;
+  color: aliceblue;
+  /*   margin: 0; */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Roboto Condensed;
   /*   margin: 0 auto; кнопка встаёт вначале странице */
 }
 
@@ -331,8 +350,6 @@ h2.about__heading {
   font-size: 18px;
   color: aliceblue;
   margin: 0;
-  text-transform: uppercase;
-  font-family: Roboto Condensed;
 }
 
 .animate__pulse {
@@ -421,14 +438,14 @@ h2.about__heading {
 .my__offering-inner {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 100px;
 }
 
 .my__offering-item {
   margin-right: 30px;
   background-color: rgb(255, 255, 255);
-  width: 700px;
+  min-width: 400px;
   height: 450px;
   color: rgb(0, 0, 0);
   font-family: Roboto Condensed;
@@ -625,6 +642,12 @@ ul.slick-dots {
   font-weight: bolder;
   background-color: #185158fb;
   color: aliceblue;
+  cursor: pointer;
+}
+
+.contact-form-btn:hover {
+  background-color: rgb(11, 23, 32);
+  box-shadow: rgb(46, 60, 71) inset 0 0 10px;
 }
 
 .Contacts__right {
@@ -634,6 +657,14 @@ ul.slick-dots {
   padding: 15px;
   width: 350px;
   line-height: 30px;
+}
+
+.map-image {
+  height: 570px;
+  width: 430px;
+  position: absolute;
+  right: 60px;
+  top: 25px;
 }
 
 .Contacts__right-text {
@@ -650,7 +681,7 @@ ul.slick-dots {
 
 .footer {
   background: linear-gradient(
-    45deg,
+    -45deg,
     #185158fb,
     #3ea2affb,
     #2e8f9cfb,
@@ -677,4 +708,120 @@ ul.slick-dots {
   font-size: 18px;
   font-weight: 800;
   font-family: Montserrat;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 80;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background-color: #fff;
+  max-width: 800px;
+  padding: 30px 30px;
+  position: relative;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  transition: all 0.8s ease 0s;
+}
+
+.popup__close {
+  position: absolute;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: bolder;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.popup__title {
+}
+
+.popup__heading {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+}
+
+.popup__subheading {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 450px;
+}
+
+.popup-form input {
+  height: 20px;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family: "Raleway", sans-serif;
+  display: block;
+}
+
+.popup-form-btn {
+  width: 450px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px 10px 10px 25px;
+  margin-bottom: 20px;
+  border: 1px solid #000000fb;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  background-color: #000000fb;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.popup-form-btn:hover {
+  background-color: #402055;
+  box-shadow: rgb(46, 60, 71) inset 0 0 10px;
 }

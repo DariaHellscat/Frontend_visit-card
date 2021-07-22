@@ -17,7 +17,7 @@
 
       <header class="header" id="top">
            <div class="header__top">
-          <div class="header__top-inner">
+          <div id="header" class="header__top-inner">
             <a href="index.html" class="logo__text">G.o.l.u.b.n.i.c.h.a.i.a</a>
             <nav class="menu">
               <ul class="menu__list">
@@ -41,6 +41,7 @@
         
           <div class="header__content">
           <div class="header__content-inner">
+
             <img
               class="header__content-image"
               src="images/bg-images/bg-image.png"
@@ -108,11 +109,13 @@
               </div>
             </div>
             <div class="about__images-inner">
-              <img
+
+              <!--убрала круговой фон для фото, потому что не получается сделать так, чтобы форма обратной связи была поверх всех картинок
+                 <img
                 class="about__image-bg"
                 src="images/bg-images/about__image-bg.png"
                 alt=""
-              />
+              /> -->
               <img
                 class="about__image-photo"
                 src="images/bg-images/about__image-photo2.jpg"
@@ -120,9 +123,12 @@
               />
             </div>
           </div>
-          <button class="about__btn animate__animated animate__pulse">
-            <p class="btn__text">Связаться со мной</p>
-            </button>
+        <!--   <button class="about__btn animate__animated animate__pulse">
+            <a class="btn__text" href="#popup">
+              Связаться со мной
+            </a>
+            </button> -->
+            <a class="btn__text" href="#popup"><button class="about__btn animate__animated animate__pulse">Связаться со мной</button></a>
         </div>
       </section>
 
@@ -253,7 +259,7 @@
 
           </div>
       </div>
-      <div class="border"></div>
+     <!--  <div class="border"></div> -->
      </section>
 
      <section class="Contacts" id="contact-me">
@@ -271,8 +277,8 @@
             <input type="text" placeholder="EMAIL">
              <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
              <textarea class="textarea-message" placeholder="ВВЕДИТЕ СООБЩЕНИЕ"></textarea>
-            <!--  <input class="add-file" type="file" type="text"> 
-            здесь я хочу сделать форму для прикрепления файлов, например ТЗ на разработку--> 
+             <input class="add-file" type="file" type="text">  
+           <!--  здесь я хочу сделать форму для прикрепления файлов, например ТЗ на разработку -->
                  <button class="contact-form-btn" type="submit">
                оТПРАВИТЬ
               </button>
@@ -283,6 +289,7 @@
            <img class="gmail-icon" src="images/icons/gmail-icon.png" alt="">
            <span class="Contacts__right-text">daryadeveloper14@gmail.com</span> <br>
          </div>
+         <img class="map-image" src="images/map2.png" alt="">
        </div>
 
        </div>
@@ -297,8 +304,36 @@
        </div>
      </footer>
 
+      <div id="popup" class="popup">
+        <a href="#header" class="popup__area"></a>
+       <div class="popup__body">
+         <div class="popup__content">
+           <a href="#header" class="popup__close">х</a>
+           <div class="popup__title">
+            <h2 class="popup__heading">Форма обратной связи</h2>
+            <p class="popup__subheading">Заполните завку ниже и я свяжусь с Вами</p>
+          </div>
+           <div class="popup__text">
+              <form class="popup-form">
+            <input type="text" placeholder="ИМЯ">
+            <input type="text" placeholder="EMAIL">
+             <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+             <textarea class="textarea-message" placeholder="ВВЕДИТЕ СООБЩЕНИЕ"></textarea>
+            <input class="add-file" type="file"> 
+          <!--   здесь я хочу сделать форму для прикрепления файлов, например ТЗ на разработку -->
+                 <button class="popup-form-btn" type="submit">
+               оТПРАВИТЬ
+              </button>
+           </form>
+
+           </div>
+         </div>
+       </div>
+     </div>  
+
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="JS/slick.min.js"></script>
 <script src="JS/script.js"></script>
+
   </body>
 </html>
